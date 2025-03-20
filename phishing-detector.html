@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhishGuard - Advanced Phishing URL Detection</title>
+    <link rel="stylesheet" href="phishing-detector.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="logo">
+                <svg class="shield-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <h1>PhishGuard</h1>
+            </div>
+            <div class="nav-links">
+                <a href="#" class="active">Home</a>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-icon">
+                    <svg class="shield-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h1>Phishing URL <span class="highlight">Detector</span></h1>
+                <p>Protect yourself from phishing attacks with our advanced detection technology</p>
+            </div>
+            
+            <div class="url-checker">
+                <div class="checker-card">
+                    <h2>Check any URL for safety</h2>
+                    <div class="url-input-container">
+                        <input type="text" id="url-input" placeholder="Enter URL to check (e.g., example.com)">
+                        <svg class="search-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M21 21L16.65 16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <button id="check-button" class="check-button">
+                        <svg class="zap-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Check URL
+                    </button>
+                    
+                    <!-- Loading State -->
+                    <div id="loading-indicator" class="loading-indicator hidden">
+                        <div class="loader"></div>
+                        <p>Analyzing URL security...</p>
+                    </div>
+                    
+                    <!-- Result Display -->
+                    <div id="result-container" class="result-container hidden">
+                        <div id="result-indicator" class="result-indicator">
+                            <!-- SVG and result text will be added via JavaScript -->
+                        </div>
+                        <p id="result-message"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Security Tips Section -->
+        <section class="security-tips">
+            <h2>Security Tips</h2>
+            <p class="section-desc">Protect yourself from phishing attacks with these security practices</p>
+            
+            <div class="tips-container">
+                <div class="tip-card">
+                    <h3>Check the URL</h3>
+                    <p>Always verify the website address before entering sensitive information</p>
+                </div>
+                <div class="tip-card">
+                    <h3>Be Cautious with Emails</h3>
+                    <p>Don't click on suspicious links in emails or messages from unknown senders</p>
+                </div>
+                <div class="tip-card">
+                    <h3>Use Strong Passwords</h3>
+                    <p>Create unique, complex passwords for each of your online accounts</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- History Section -->
+        <section id="history-section" class="history-section hidden">
+            <h2>Recent Scans</h2>
+            <div class="history-container">
+                <ul id="history-list" class="history-list">
+                    <!-- History items will be added via JavaScript -->
+                </ul>
+            </div>
+        </section>
+        
+        <!-- Footer -->
+    </div>
+
+    <!-- Notification System -->
+    <div id="notification-container" class="notification-container"></div>
+
+    <script src="phishing-detector.js"></script>
+</body>
+</html>
