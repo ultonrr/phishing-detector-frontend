@@ -18,7 +18,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     async function analyzeUrl(url) {
-        const apiUrl = "https://phishing-api.onrender.com/predict"; // Backend API URL
+        const apiUrl = "https://phishing-it.onrender.com/predict";
+
 
         loadingIndicator.classList.remove("hidden");
         resultContainer.classList.add("hidden");
